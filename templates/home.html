@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        .result {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .result h2 {
+            color: #d9534f;
+        }
+        .result h3 {
+            color: #5bc0de;
+        }
+    </style>
+</head>
+<body>
+    <h1>Churn Prediction</h1>
+    <form action="/" method="post">
+        <label for="tenure">Tenure (months):</label>
+        <input type="text" id="tenure" name="tenure" placeholder="Enter tenure in months"><br>
+        
+        <label for="monthly_charges">Monthly Charges:</label>
+        <input type="text" id="monthly_charges" name="monthly_charges" placeholder="Enter monthly charges"><br>
+        
+        <label for="internet_service">Internet Service (DSL/Fiber Optic/No):</label>
+        <input type="text" id="internet_service" name="internet_service" placeholder="Enter type of internet service"><br>
+        
+        <label for="online_security">Online Security (Yes/No):</label>
+        <input type="text" id="online_security" name="online_security" placeholder="Yes or No"><br>
+        
+        <label for="online_backup">Online Backup (Yes/No):</label>
+        <input type="text" id="online_backup" name="online_backup" placeholder="Yes or No"><br>
+        
+        <label for="device_protection">Device Protection (Yes/No):</label>
+        <input type="text" id="device_protection" name="device_protection" placeholder="Yes or No"><br>
+        
+        <label for="tech_support">Tech Support (Yes/No):</label>
+        <input type="text" id="tech_support" name="tech_support" placeholder="Yes or No"><br>
+        
+        <label for="streaming_tv">Streaming TV (Yes/No):</label>
+        <input type="text" id="streaming_tv" name="streaming_tv" placeholder="Yes or No"><br>
+        
+        <label for="contract_type">Contract Type (Month-to-month/One year/Two year):</label>
+        <input type="text" id="contract_type" name="contract_type" placeholder="Enter contract type"><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if output1 %}
+    <div class="result">
+        <h2>{{ output1 }}</h2>
+        <h3>{{ output2 }}</h3>
+    </div>
+    {% endif %}
+</body>
+</html>
