@@ -9,10 +9,3 @@ Features:
 2. Machine learning model for churn prediction.
 3. Displays prediction results with confidence scores.
 
-Requirements:
-
-1. Python 3.8 or higher
-2. Flask
-3. Pandas
-4. Scikit-learn
-5. Pickle (for model serialization)
